@@ -1,0 +1,25 @@
+#sidebar{
+  padding: 1rem;
+  background: rgba(0.4, 0.4, 0.4, 0.2);
+  height: 100vh;
+}
+
+#sidebar li{
+  text-align: center;
+  line-height: 2.5rem;
+  cursor: pointer;
+}
+
+#sidebar li:not(:first-child){
+  margin: 1rem 0;
+}
+
+.sidebar-item{
+  background: white;
+  padding: 1rem 0.25rem 0rem 0.25rem;
+}
+
+.sidebar-item > .sidebar-item-title{
+  font-size: 0.75rem;
+  font-weight: bold;
+}

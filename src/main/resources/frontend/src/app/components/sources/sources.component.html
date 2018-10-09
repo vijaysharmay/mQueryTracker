@@ -1,0 +1,147 @@
+<!-- <div class="columns">
+  <div class="column" id="sources-list-section"> -->
+  <div id="sources-list-section">
+    <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+      <thead>
+        <tr>
+          <th><i class="fa fa-database"></i>DATABASE</th>
+          <th><i class="fa fa-server"></i>HOST</th>
+          <th><i class="fa fa-plug"></i>PORT</th>
+          <th><i class="fa fa-map-pin"></i>AUTH DB</th>
+          <th><i class="fa fa-user"></i>USER</th>
+          <th><i class="fa fa-user-secret"></i>PASSWORD</th>
+          <th><i class="fa fa-gear"></i>OPERATION</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let row of sources">
+          <td>
+            <span *ngIf="row.id">{{ row.name }}</span>
+            <input *ngIf="!row.id" [(ngModel)]="row.name" class="input is-small" type="text">
+          </td>
+          <td>
+            <span *ngIf="row.id">{{ row.host }}</span>
+            <input *ngIf="!row.id" [(ngModel)]="row.host" class="input is-small" type="text">
+          </td>
+          <td>
+            <span *ngIf="row.id">{{ row.port }}</span>
+            <input *ngIf="!row.id" [(ngModel)]="row.port" class="input is-small" type="number">
+          </td>
+          <td>
+            <span *ngIf="row.id">{{ row.authSource }}</span>
+            <input *ngIf="!row.id" [(ngModel)]="row.authSource" class="input is-small" type="text">
+          </td>
+          <td>
+            <span *ngIf="row.id">{{ row.user }}</span>
+            <input *ngIf="!row.id" [(ngModel)]="row.user" class="input is-small" type="text">
+          </td>
+          <td>
+            <span *ngIf="row.id">{{ row.passwd }}</span>
+            <input *ngIf="!row.id" [(ngModel)]="row.passwd" class="input is-small" type="password">
+          </td>
+          <td>
+            <button *ngIf="!row.id" (click)="addSource(row)" class="button is-small"><i class="fa fa-edit"></i>ADD</button>
+            <button *ngIf="!row.id" (click)="resetSource()" class="button is-small"><i class="fa fa-edit"></i>RESET</button>
+            <button *ngIf="row.id" (click)="editSource(row)" class="button is-small"><i class="fa fa-edit"></i>EDIT</button>
+            <button *ngIf="row.id" (click)="updateSource(row)" class="button is-small"><i class="fa fa-edit"></i>UPDATE</button>
+            <button *ngIf="row.id" (click)="deleteSource(row)" class="button is-small"><i class="fa fa-trash"></i>REMOVE</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- <div class="column is-2 has-border-left has-100vh is-centered">
+
+      <div class="field">
+        <label class="label">Database Name</label>
+        <div class="control has-icons-left has-icons-right">
+          <input [(ngModel)]="source.name" class="input" type="text">
+          <span class="icon is-small is-left">
+            <i class="fa fa-database"></i>
+          </span>
+          <p class="help is-danger">{{ error.nameError }}</p>
+        </div>
+      </div>
+
+
+      <div class="field">
+        <label class="label">Database Host</label>
+        <div class="control has-icons-left has-icons-right">
+          <input [(ngModel)]="source.host" class="input" type="text">
+          <span class="icon is-small is-left">
+            <i class="fa fa-user"></i>
+          </span>
+          <p class="help is-danger">{{ error.hostError }}</p>
+        </div>
+      </div>
+
+
+      <div class="field">
+        <label class="label">Database Port</label>
+        <div class="control has-icons-left has-icons-right">
+          <input [(ngModel)]="source.port" class="input" type="number">
+          <span class="icon is-small is-left">
+            <i class="fa fa-plug"></i>
+          </span>
+          <p class="help is-danger">{{ error.portError }}</p>
+        </div>
+      </div>
+
+
+      <div class="field">
+        <label class="label">Authentication User</label>
+        <div class="control has-icons-left has-icons-right">
+          <input [(ngModel)]="source.user" class="input" type="text">
+          <span class="icon is-small is-left">
+            <i class="fa fa-user"></i>
+          </span>
+          <p class="help is-danger">{{ error.userError }}</p>
+        </div>
+      </div>
+
+
+      <div class="field">
+        <label class="label">Authentication Password</label>
+        <div class="control has-icons-left has-icons-right">
+          <input [(ngModel)]="source.passwd" class="input" type="password">
+          <span class="icon is-small is-left">
+            <i class="fa fa-user-secret"></i>
+          </span>
+          <p class="help is-danger">{{ error.passwdError }}</p>
+        </div>
+      </div>
+
+
+      <div class="field">
+        <label class="label">Authentication Database</label>
+        <div class="control has-icons-left has-icons-right">
+          <input [(ngModel)]="source.authSource" class="input" type="text">
+          <span class="icon is-small is-left">
+            <i class="fa fa-table"></i>
+          </span>
+          <p class="help is-danger">{{ error.authSourceError }}</p>
+        </div>
+      </div>
+
+      <br>
+
+      <div class="field">
+        <button class="button is-dark is-fullwidth" (click)="addSource()">ADD</button>
+      </div>
+
+      <div class="field">
+        <button class="button is-dark is-fullwidth" (click)="updateSource()">UPDATE</button>
+      </div>
+
+      <div class="field">
+        <button class="button is-dark is-fullwidth" (click)="testSource()">
+          <i *ngIf="!sourceStatus && resetFlag" class="fa fa-play"></i>
+          <i *ngIf="sourceLoading && !resetFlag" class="fa fa-spin fa-fw fa-refresh"></i>
+          <i *ngIf="sourceStatus && resetFlag" class="fa fa-check is-green"></i>
+          &nbsp;TEST
+        </button>
+      </div>
+
+  </div> -->
+
+<!-- </div> -->
